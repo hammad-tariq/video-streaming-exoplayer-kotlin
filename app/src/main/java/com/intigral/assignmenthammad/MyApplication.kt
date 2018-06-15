@@ -6,6 +6,7 @@ import com.intigral.assignmenthammad.ui.activities.mainactivity.MainActivityModu
 import com.intigral.assignmenthammad.di.ApiModule
 import com.intigral.assignmenthammad.di.AppComponent
 import com.intigral.assignmenthammad.di.AppModule
+import com.intigral.assignmenthammad.di.DaggerAppComponent
 
 
 open class MyApplication: Application(){

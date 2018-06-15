@@ -1,6 +1,6 @@
 package com.intigral.assignmenthammad.data.api
 
-import com.intigral.androidassignment.data.api.pojo.response.LineUp
+import com.intigral.assignmenthammad.data.api.pojo.response.LineUp
 import io.reactivex.Observable
 import retrofit2.http.GET
 
