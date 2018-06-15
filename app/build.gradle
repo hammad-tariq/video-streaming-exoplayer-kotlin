@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.intigral.assignmenthammad"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        buildConfigField "String", "baseURL", "\"http://devapi.dawriplus.com/\""
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    /*
+     Support library and Constraint dependencies
+     */
+    implementation "com.android.support:appcompat-v7:$support_library_version"
+    implementation "com.android.support:support-v4:$support_library_version"
+    implementation "com.android.support:mediarouter-v7:$support_library_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_layout_version"
+    implementation "com.android.support:recyclerview-v7:$support_library_version"
+
+
+    // EXO PLAYER LIBRARY FOR VIDEO STREAMING
+    implementation "com.google.android.exoplayer:exoplayer:$exoplayer_version"
+
+    /*
+    Multi Dex for devices prior 21
+    */
+    implementation "com.android.support:multidex:$multidex_version"
+
+
+    /*
+     Dependency for rxJava
+    */
+    implementation "io.reactivex.rxjava2:rxjava:$rxJava2_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid_version"
+
+    /*
+     Retrofit dependency
+     */
+    implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit2_version"
+
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_kotlin_version"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofit2_version"
+
+    /*
+      OkHttp dependency
+     */
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    /*
+     Dagger 2 Dependency
+    */
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    implementation "com.google.dagger:dagger-android:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_version"
+
+    /*
+     Kotlin Jre and Jdk dependency
+     */
+    compileOnly 'org.glassfish:javax.annotation:10.0-b28'
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+    /*
+      Mockito, Junit, Espresso Version
+     */
+    androidTestImplementation "org.mockito:mockito-core:$mockito_core_version"
+    androidTestImplementation "com.google.dexmaker:dexmaker:$dexmaker"
+    androidTestImplementation "com.google.dexmaker:dexmaker-mockito:$dexmaker"
+    testImplementation "org.mockito:mockito-inline:$mockito_inline_version"
+
+    testImplementation "junit:junit:$junit_test_version"
+    androidTestImplementation "com.android.support.test:runner:$test_runner_version"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_version"
+
+    /*
+    Permission dependencies
+     */
+    implementation "io.vrinda.kotlinpermissions:kotlinpermissions:$kotlin_permission"
+
+
+    /*
+    * Arch life and live data dependencies
+    * */
+    implementation "android.arch.lifecycle:extensions:$arch_life_version"
+    implementation "android.arch.lifecycle:viewmodel:$arch_life_version"
+    implementation "android.arch.lifecycle:livedata:$arch_life_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$arch_life_version"
+    testImplementation "android.arch.core:core-testing:$arch_life_version"
+
+}
