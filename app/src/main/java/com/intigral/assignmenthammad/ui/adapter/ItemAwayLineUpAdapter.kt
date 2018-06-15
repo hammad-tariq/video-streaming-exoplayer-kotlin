@@ -5,9 +5,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.intigral.androidassignment.R
 import com.intigral.androidassignment.data.api.pojo.response.AwayTeam
 import com.intigral.androidassignment.data.api.pojo.response.LineUp
+import com.intigral.assignmenthammad.R
 import kotlinx.android.synthetic.main.item_lineup.view.*
 
 class ItemAwayLineUpAdapter(var context: Context, var lineUpAway: AwayTeam) : RecyclerView.Adapter<ItemAwayLineUpAdapter.ViewHolder>() {

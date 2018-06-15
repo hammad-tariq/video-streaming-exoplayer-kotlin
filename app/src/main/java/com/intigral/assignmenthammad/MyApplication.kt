@@ -4,6 +4,7 @@ import android.app.Application
 import com.intigral.androidassignment.di.ApiModule
 import com.intigral.androidassignment.di.AppComponent
 import com.intigral.androidassignment.di.AppModule
+import com.intigral.androidassignment.di.DaggerAppComponent
 import com.intigral.androidassignment.ui.activities.mainactivity.MainActivityComponent
 import com.intigral.androidassignment.ui.activities.mainactivity.MainActivityModule
 

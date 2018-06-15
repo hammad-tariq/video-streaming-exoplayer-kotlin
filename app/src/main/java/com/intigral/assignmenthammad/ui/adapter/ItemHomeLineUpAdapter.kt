@@ -5,9 +5,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.intigral.androidassignment.R
 import com.intigral.androidassignment.data.api.pojo.response.HomeTeam
 import com.intigral.androidassignment.data.api.pojo.response.LineUp
+import com.intigral.assignmenthammad.R
 import kotlinx.android.synthetic.main.item_lineup.view.*
 
 class ItemHomeLineUpAdapter(var context: Context, var lineUpHome: HomeTeam) : RecyclerView.Adapter<ItemHomeLineUpAdapter.ViewHolder>() {

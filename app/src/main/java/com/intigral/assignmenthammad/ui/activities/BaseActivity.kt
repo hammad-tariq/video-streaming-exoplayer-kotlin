@@ -23,6 +23,9 @@ import com.google.android.exoplayer2.source.hls.HlsMediaSource
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory
 import com.google.android.exoplayer2.util.Util
+import com.intigral.androidassignment.utils.DialogeUtils
+import com.intigral.androidassignment.utils.ProgressDialogeInterface
+import com.intigral.assignmenthammad.R
 import io.vrinda.kotlinpermissions.PermissionsActivity
 import kotlinx.android.synthetic.main.activity_main.*
 

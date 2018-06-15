@@ -24,6 +24,7 @@ import com.intigral.androidassignment.data.api.pojo.response.LineUp
 import com.intigral.androidassignment.ui.adapter.ItemAwayLineUpAdapter
 import com.intigral.androidassignment.ui.adapter.ItemHomeLineUpAdapter
 import com.intigral.assignmenthammad.R
+import com.intigral.assignmenthammad.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.exo_simple_player_view.*
 import javax.inject.Inject
@@ -51,6 +52,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
     var overlayVisible: Boolean = true
 
 
+    /*
+    Hide exo player overlay view on screen touch.
+    */
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         exo_overlay.visibility = View.GONE
         overlayVisible = false
@@ -61,15 +65,28 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
     override fun onClick(v: View?) {
 
         when (v) {
+
+        /*
+        * For Mobile Devices show different line up items on button click.
+        * */
             btnAwayLineUps -> {
                 rvLeft?.adapter = ItemAwayLineUpAdapter(this@MainActivity, lineUp.Lineups.Data.AwayTeam)
             }
             btnHomeLineUps -> {
                 rvLeft?.adapter = ItemHomeLineUpAdapter(this@MainActivity, lineUp.Lineups.Data.HomeTeam)
             }
+
+        /*
+        * Close Video Player on cancel button click.
+        * */
+
             imgCloseFullScreen -> {
                 finish()
             }
+
+        /*
+        * Show / Hide Exo player on top menu button click (eye icon).
+        * */
             imgShowHideOverlay -> {
                 if (overlayVisible) {
                     exo_overlay.visibility = View.GONE
@@ -82,6 +99,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
         }
     }
 
+
+    /*
+    * Initialize Dagger Component for dependencies.
+    * */
 
     override fun init(savedInstanceState: Bundle?) {
 
@@ -98,10 +119,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         rvLeft = findViewById(R.id.rv_lineup_left_exo) as? RecyclerView
 
         btnHomeLineUps = findViewById(R.id.btnHomeLineUpsExo) as? Button
         btnAwayLineUps = findViewById(R.id.btnAwayLineUpsExo) as? Button
+
 
         btnHomeLineUps?.setOnClickListener(this)
         btnAwayLineUps?.setOnClickListener(this)
@@ -112,8 +135,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
     /*
        Subscriber for Data Observers
    */
-
-
     fun subscribe() {
         var isDataLoading = object : Observer<Boolean> {
             override fun onChanged(t: Boolean?) {
@@ -138,6 +159,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
             }
         }
 
+        /*
+        * Line Ups API Call Back.
+        * Populate line up data in recyclerview. (Overlay)
+        * */
         var lineUpResponse = object : Observer<LineUp> {
             override fun onChanged(t: LineUp?) {
                 t?.let {
@@ -149,6 +174,10 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
             }
         }
 
+        /*
+        * Initialize progress dialog for Line Up API Call.
+        * Observer to the data change/ API Response.
+        * */
         mMainActivityViewModel.getIsLoading().observe(this, isDataLoading)
         mMainActivityViewModel.getError().observe(this, errorObserver)
         mMainActivityViewModel.lineDataResponse().observe(this, lineUpResponse)
@@ -219,6 +248,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
         }
     }
 
+    /*
+    * HlsMediaSource Builduing from given URI (video source).
+    * */
     private fun buildMediaSource(uri: Uri): MediaSource {
         return HlsMediaSource.Factory(
                 DefaultHttpDataSourceFactory("exoplayer"))
@@ -236,6 +268,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), View.OnClickListener {
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
     }
+
+    /*
+    * If app is running on tablet device.
+    * initialize Right Side RecyclerView for showing Overlay on Right side of video.
+    * */
 
     private fun checkAppConfig(line: LineUp) {
         var rvRight: RecyclerView? = null
