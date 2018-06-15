@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">AssignmentHammad</string>
+
+    <string name="app_name">Assignment</string>
+
+    <string name="exoplayer_media_source">http://intigralvod1-vh.akamaihd.net/i/3rdparty/Season2017_2018/10_12_2017_Hilal_fath/Highlights/high_,256,512,768,1200,.mp4.csmil/master.m3u8</string>
+
+    <string name="loading">Loading</string>
+    <string name="error">OOOOOPS</string>
+    <string name="home_lineups">Home LineUps</string>
+    <string name="away_lineups">Away LineUps</string>
+
+
 </resources>
