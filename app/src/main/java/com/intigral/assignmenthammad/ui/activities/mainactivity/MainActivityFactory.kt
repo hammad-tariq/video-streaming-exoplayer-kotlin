@@ -1,4 +1,4 @@
-package com.intigral.androidassignment.ui.activities.mainactivity
+package com.intigral.assignmenthammad.ui.activities.mainactivity
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider

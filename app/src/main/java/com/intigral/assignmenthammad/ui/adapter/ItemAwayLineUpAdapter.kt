@@ -1,12 +1,12 @@
-package com.intigral.androidassignment.ui.adapter
+package com.intigral.assignmenthammad.ui.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.intigral.androidassignment.data.api.pojo.response.AwayTeam
-import com.intigral.androidassignment.data.api.pojo.response.LineUp
+import com.intigral.assignmenthammad.data.api.pojo.response.AwayTeam
+import com.intigral.assignmenthammad.data.api.pojo.response.LineUp
 import com.intigral.assignmenthammad.R
 import kotlinx.android.synthetic.main.item_lineup.view.*
 

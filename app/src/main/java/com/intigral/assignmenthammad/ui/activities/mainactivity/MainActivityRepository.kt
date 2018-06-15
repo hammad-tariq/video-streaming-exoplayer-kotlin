@@ -1,9 +1,9 @@
-package com.intigral.androidassignment.ui.activities.mainactivity
+package com.intigral.assignmenthammad.ui.activities.mainactivity
 
 
-import com.intigral.androidassignment.MyApplication
-import com.intigral.androidassignment.data.api.INetworkApi
-import com.intigral.androidassignment.data.api.pojo.response.LineUp
+import com.intigral.assignmenthammad.MyApplication
+import com.intigral.assignmenthammad.data.api.INetworkApi
+import com.intigral.assignmenthammad.data.api.pojo.response.LineUp
 import io.reactivex.Observable
 import javax.inject.Inject
 

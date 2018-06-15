@@ -1,9 +1,12 @@
-package com.intigral.androidassignment.di
+package com.intigral.assignmenthammad.di
 
-import com.intigral.androidassignment.MyApplication
-import com.intigral.androidassignment.ui.activities.mainactivity.MainActivityComponent
-import com.intigral.androidassignment.ui.activities.mainactivity.MainActivityModule
-import com.intigral.androidassignment.ui.activities.mainactivity.MainActivityRepository
+import com.intigral.assignmenthammad.MyApplication
+
+import com.intigral.assignmenthammad.ui.activities.mainactivity.MainActivityComponent
+import com.intigral.assignmenthammad.ui.activities.mainactivity.MainActivityModule
+import com.intigral.assignmenthammad.ui.activities.mainactivity.MainActivityRepository
+
+
 import dagger.Component
 import javax.inject.Singleton
 

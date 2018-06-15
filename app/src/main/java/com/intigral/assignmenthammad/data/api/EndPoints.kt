@@ -1,4 +1,4 @@
-package com.intigral.androidassignment.data.api
+package com.intigral.assignmenthammad.data.api
 
 
 object Endpoints {

@@ -1,4 +1,4 @@
-package com.intigral.androidassignment.di
+package com.intigral.assignmenthammad.di
 
 import android.app.Application
 import android.util.Log

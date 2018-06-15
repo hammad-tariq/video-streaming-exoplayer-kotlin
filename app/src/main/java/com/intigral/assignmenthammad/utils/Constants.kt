@@ -1,4 +1,4 @@
-package com.intigral.androidassignment.utils
+package com.intigral.assignmenthammad.utils
 
 object Constants {
 

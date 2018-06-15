@@ -1,4 +1,5 @@
-package com.intigral.androidassignment.utils
+package com.intigral.assignmenthammad.utils
+
 
 internal interface ProgressDialogeInterface {
 

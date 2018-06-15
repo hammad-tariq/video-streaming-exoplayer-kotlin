@@ -1,4 +1,5 @@
-package com.intigral.androidassignment.data.api.pojo.response
+package com.intigral.assignmenthammad.data.api.pojo.response
+
 
 data class Player(
     val Order: Int,

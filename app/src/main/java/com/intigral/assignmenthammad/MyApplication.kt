@@ -1,17 +1,17 @@
-package com.intigral.androidassignment
+package com.intigral.assignmenthammad
 
 import android.app.Application
-import com.intigral.androidassignment.di.ApiModule
-import com.intigral.androidassignment.di.AppComponent
-import com.intigral.androidassignment.di.AppModule
-import com.intigral.androidassignment.di.DaggerAppComponent
-import com.intigral.androidassignment.ui.activities.mainactivity.MainActivityComponent
-import com.intigral.androidassignment.ui.activities.mainactivity.MainActivityModule
+import com.intigral.assignmenthammad.ui.activities.mainactivity.MainActivityComponent
+import com.intigral.assignmenthammad.ui.activities.mainactivity.MainActivityModule
+import com.intigral.assignmenthammad.di.ApiModule
+import com.intigral.assignmenthammad.di.AppComponent
+import com.intigral.assignmenthammad.di.AppModule
+
 
 open class MyApplication: Application(){
 
     /*
-  Dagger App component with scoop of whole application
+  Dagger App component with scope of whole application
   */
 
     val appComponent: AppComponent by lazy {

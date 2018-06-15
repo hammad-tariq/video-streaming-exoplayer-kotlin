@@ -1,12 +1,12 @@
-package com.intigral.androidassignment.ui.activities.mainactivity
+package com.intigral.assignmenthammad.ui.activities.mainactivity
 
 import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModel
-import com.intigral.androidassignment.SingleLiveEvent
-import com.intigral.androidassignment.data.api.pojo.response.LineUp
-import com.intigral.androidassignment.utils.applySchedulersKotlin
+import com.intigral.assignmenthammad.SingleLiveEvent
+import com.intigral.assignmenthammad.data.api.pojo.response.LineUp
+import com.intigral.assignmenthammad.utils.applySchedulersKotlin
 import io.reactivex.disposables.Disposable
 
 class MainActivityViewModel(var mainActivityRepository: MainActivityRepository): ViewModel() {

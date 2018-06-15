@@ -1,4 +1,4 @@
-package com.intigral.androidassignment.utils
+package com.intigral.assignmenthammad.utils
 
 import android.app.AlertDialog
 import android.content.Context

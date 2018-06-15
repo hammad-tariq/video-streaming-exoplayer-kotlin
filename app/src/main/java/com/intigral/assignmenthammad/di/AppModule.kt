@@ -1,10 +1,10 @@
-package com.intigral.androidassignment.di
+package com.intigral.assignmenthammad.di
 
 import android.app.Application
 import android.content.Context
 import android.net.ConnectivityManager
-import com.intigral.androidassignment.data.api.INetworkApi
-import com.intigral.androidassignment.utils.Constants
+import com.intigral.assignmenthammad.data.api.INetworkApi
+import com.intigral.assignmenthammad.utils.Constants
 import dagger.Module
 import dagger.Provides
 import retrofit2.Retrofit

@@ -1,4 +1,4 @@
-package com.intigral.androidassignment.ui.activities.mainactivity
+package com.intigral.assignmenthammad.ui.activities.mainactivity
 
 import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy

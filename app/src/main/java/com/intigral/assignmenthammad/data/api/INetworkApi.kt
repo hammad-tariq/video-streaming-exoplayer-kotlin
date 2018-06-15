@@ -1,4 +1,4 @@
-package com.intigral.androidassignment.data.api
+package com.intigral.assignmenthammad.data.api
 
 import com.intigral.androidassignment.data.api.pojo.response.LineUp
 import io.reactivex.Observable

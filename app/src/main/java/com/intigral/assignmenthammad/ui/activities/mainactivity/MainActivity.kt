@@ -1,4 +1,4 @@
-package com.intigral.androidassignment.ui.activities.mainactivity
+package com.intigral.assignmenthammad.ui.activities.mainactivity
 
 import android.annotation.SuppressLint
 import android.arch.lifecycle.Observer
@@ -19,12 +19,13 @@ import com.google.android.exoplayer2.source.hls.HlsMediaSource
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory
 import com.google.android.exoplayer2.util.Util
-import com.intigral.androidassignment.MyApplication
-import com.intigral.androidassignment.data.api.pojo.response.LineUp
-import com.intigral.androidassignment.ui.adapter.ItemAwayLineUpAdapter
-import com.intigral.androidassignment.ui.adapter.ItemHomeLineUpAdapter
+import com.intigral.assignmenthammad.MyApplication
+import com.intigral.assignmenthammad.data.api.pojo.response.LineUp
+import com.intigral.assignmenthammad.ui.adapter.ItemAwayLineUpAdapter
+import com.intigral.assignmenthammad.ui.adapter.ItemHomeLineUpAdapter
 import com.intigral.assignmenthammad.R
 import com.intigral.assignmenthammad.databinding.ActivityMainBinding
+import com.intigral.assignmenthammad.ui.activities.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.exo_simple_player_view.*
 import javax.inject.Inject

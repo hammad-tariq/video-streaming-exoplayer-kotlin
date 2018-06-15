@@ -1,4 +1,4 @@
-package com.intigral.androidassignment
+package com.intigral.assignmenthammad
 
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.MutableLiveData
